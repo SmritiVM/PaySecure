@@ -10,6 +10,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
 import android.widget.Toast;
 
@@ -95,9 +96,19 @@ public class GPSTrack extends AppCompatActivity {
         double control_longitute = 80.15741256996989;
         double control_latitude = 12.842172933742404;
         if (longitude >= control_longitute + 1 || latitude >= control_latitude + 1)
+        {
             Toast.makeText(getApplicationContext(), "Location too far. Sending OTP to alternate number", Toast.LENGTH_SHORT).show();
-        else
+        }
+        else if (longitude <= control_longitute - 1 || latitude <= control_latitude - 1) {
+            Toast.makeText(getApplicationContext(), "Location too far. Sending OTP to alternate number", Toast.LENGTH_SHORT).show();
+        }
+        else {
             Toast.makeText(getApplicationContext(), "Location within bounds, sending OTP to this number", Toast.LENGTH_SHORT).show();
+            new Handler().postDelayed(() -> {
+                startActivity(new Intent(this, OTP.class));
+                finish();
+            }, 3000);
+        }
     }
 
 

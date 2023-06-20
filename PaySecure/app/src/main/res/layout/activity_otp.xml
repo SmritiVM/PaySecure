@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--Edittext for getting users phone number-->
+
+    <!--Button for getting OTP-->
+
+    <!--Edittext for getting otp from user-->
+
+    <!--button for verifying user OTP-->
+
+
+    <ImageView
+        android:id="@+id/img_send_otp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="539dp"
+        android:src="@drawable/rupee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="251dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="435dp"
+        android:fontFamily="sans-serif-black"
+        android:text="PaySecure"
+        android:textAlignment="center"
+        android:textColor="@color/colortextfirst"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/idEdtOtp"
+        android:layout_width="359dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="318dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="373dp"
+        android:hint="Enter OTP"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/idBtnVerify"
+        android:layout_width="294dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="377dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="285dp"
+        android:text="Verify OTP"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

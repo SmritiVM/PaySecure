@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "873940199653",
+    "project_id": "pay-28e1b",
+    "storage_bucket": "pay-28e1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873940199653:android:11f3f5ddd60f2abf480c0c",
+        "android_client_info": {
+          "package_name": "com.example.paysecure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873940199653-be0lcjm906452799ps79khfia901g3t8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnfnZlDYOolVMsnAJo0ZrZ54YjhDZcmBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "873940199653-be0lcjm906452799ps79khfia901g3t8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

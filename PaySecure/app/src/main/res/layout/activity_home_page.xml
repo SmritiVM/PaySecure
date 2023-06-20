@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:backgroundTintMode="add"
+        android:forceHasOverlappingRendering="false"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:theme="@style/Base.Theme.PaySecure">
+
+        <ImageView
+            android:id="@+id/img_send_otp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/rupee" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="388dp">
+
+            <Button
+                android:id="@+id/page3"
+                android:layout_width="191dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="116dp"
+                android:layout_marginBottom="56dp"
+                android:background="@drawable/backgroundbox"
+                android:text="OK"
+                android:textColor="@color/colortextfirst"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/probar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:layout_width="323dp"
+                android:layout_height="119dp"
+                android:layout_marginStart="118dp"
+                android:layout_marginTop="53dp"
+                android:layout_marginEnd="119dp"
+                android:layout_marginBottom="280dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Transaction Complete"
+                android:textAlignment="center"
+                android:textColor="@color/colortextfirst"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
