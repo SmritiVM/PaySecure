@@ -29,6 +29,7 @@ public class GPSTrack extends AppCompatActivity {
     private ArrayList permissionsRejected = new ArrayList();
     private ArrayList permissions = new ArrayList();
 
+    String phone_number;
     private final static int ALL_PERMISSIONS_RESULT = 101;
     LocationTrack locationTrack;
 
@@ -97,18 +98,24 @@ public class GPSTrack extends AppCompatActivity {
         double control_latitude = 12.842172933742404;
         if (longitude >= control_longitute + 1 || latitude >= control_latitude + 1)
         {
+            phone_number = "7972610132";
             Toast.makeText(getApplicationContext(), "Location too far. Sending OTP to alternate number", Toast.LENGTH_SHORT).show();
         }
         else if (longitude <= control_longitute - 1 || latitude <= control_latitude - 1) {
+            phone_number = "7972610132";
             Toast.makeText(getApplicationContext(), "Location too far. Sending OTP to alternate number", Toast.LENGTH_SHORT).show();
         }
         else {
+            phone_number = "9353358462";
             Toast.makeText(getApplicationContext(), "Location within bounds, sending OTP to this number", Toast.LENGTH_SHORT).show();
-            new Handler().postDelayed(() -> {
-                startActivity(new Intent(this, OTP.class));
-                finish();
-            }, 3000);
+
         }
+        new Handler().postDelayed(() -> {
+            Intent i = new Intent(this, OTP.class);
+            i.putExtra("message_key", phone_number);
+            startActivity(i);
+            finish();
+        }, 3000);
     }
 
 

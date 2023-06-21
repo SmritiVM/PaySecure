@@ -48,7 +48,8 @@ public class OTP extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         // initializing variables for button and Edittext.
-        phone_no = "9353358462";
+        Intent i = getIntent();
+        phone_no = i.getStringExtra("message_key");
         edtOTP = findViewById(R.id.idEdtOtp);
         verifyOTPBtn = findViewById(R.id.idBtnVerify);
         //generateOTPBtn = findViewById(R.id.idBtnGetOtp);
