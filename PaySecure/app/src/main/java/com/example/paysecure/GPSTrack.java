@@ -32,6 +32,11 @@ public class GPSTrack extends AppCompatActivity {
     private final static int ALL_PERMISSIONS_RESULT = 101;
     LocationTrack locationTrack;
 
+    //Get the bundle
+    Bundle bundle = getIntent().getExtras();
+
+    //Extract the data…
+    String amt_transferred = bundle.getString("amt_transferred");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,11 +109,21 @@ public class GPSTrack extends AppCompatActivity {
         }
         else {
             Toast.makeText(getApplicationContext(), "Location within bounds, sending OTP to this number", Toast.LENGTH_SHORT).show();
-            new Handler().postDelayed(() -> {
-                startActivity(new Intent(this, OTP.class));
-                finish();
-            }, 3000);
-        }
+
+    }
+        new Handler().postDelayed(() -> {
+            Intent i = new Intent(this, OTP.class);
+            //Create the bundle
+            Bundle bundle = new Bundle();
+
+            //Add your data to bundle
+            bundle.putString("amt_received", amt_transferred);
+
+            //Add the bundle to the intent
+            i.putExtras(bundle);
+            startActivity(i);
+            finish();
+        }, 3000);
     }
 
 

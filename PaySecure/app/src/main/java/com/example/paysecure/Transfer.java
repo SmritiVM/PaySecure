@@ -26,6 +26,13 @@ public class Transfer extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Transfer.this, GPSTrack.class);
+                Bundle bundle = new Bundle();
+
+                //Add your data to bundle
+                bundle.putString("amt_transferred", String.valueOf(amount));
+
+                //Add the bundle to the intent
+                i.putExtras(bundle);
                 startActivity(i);
             }
         });
