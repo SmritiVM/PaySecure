@@ -38,11 +38,6 @@ public class OTP extends AppCompatActivity {
     // string for storing our verification ID
     private String verificationId, phone_no;
 
-    //Get the bundle
-    Bundle bundle = getIntent().getExtras();
-
-    //Extract the data…
-    String amt_received = bundle.getString("amt_received");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,13 +91,6 @@ public class OTP extends AppCompatActivity {
                             // if the code is correct and the task is successful
                             // we are sending our user to new activity.
                             Intent i = new Intent(OTP.this, HomePage.class);
-                            Bundle bundle = new Bundle();
-
-                            //Add your data to bundle
-                            bundle.putString("final_amt", amt_received);
-
-                            //Add the bundle to the intent
-                            i.putExtras(bundle);
                             startActivity(i);
                             finish();
                         } else {
